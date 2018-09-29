@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>组件3-父子通讯</title>
+</head>
+<body>
+    <div id="app">
+        <user username="Dick the Big"></user>
+    </div>
+    <template id="user_component">
+        <a :href="'/user/'+username">@{{username}}</a>
+    </template>
+    <script src="../vue.js"></script>
+    <script src="组件3-父子通讯.js"></script>
+</body>
+</html>

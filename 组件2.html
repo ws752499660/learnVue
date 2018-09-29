@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>组件2</title>
+    <style>
+        .like{
+            background-color: #66ccff;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <like></like>
+    </div>
+    <template id="like_component">
+        <!-- like样式的存在取决于liked的真假 -->
+        <button @click="onclick" v-bind:class="{like:liked}">赞 +{{like_count}}</button>
+    </template>
+    <script src="../vue.js"></script>
+    <script src="组件2.js"></script>
+</body>
+</html>
