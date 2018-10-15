@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .panel{
+            max-width: 300px;
+            border: 1px solid #999999;
+            margin-bottom: 15px
+        }
+
+        .panel > *{
+            padding: 15px;
+        }
+
+        .panel .title{
+            border-bottom: 1px solid #999999;
+        }
+        .panel .footer{
+            border-top: 1px solid #999999;
+        }
+    </style>
+    <title>插槽slots</title>
+</head>
+<body>
+    <div id="app">
+        <panel>
+            <div slot="title">皮皮虾</div>
+            <div slot="content">
+                超级无敌他妈的巨尼玛皮的西瓜皮冬瓜皮的辣条美人鱼终极旋转旋风冲锋龙卷风的真皮沙发皮皮虾
+            </div>
+        </panel>
+        <panel>
+            <div slot="title">皮皮瓜</div>
+            <div slot="content">冬瓜皮</div>
+        </panel>
+    </div>
+
+    <template id="panel-tpl">
+        <div class="panel">
+            <div class="title">
+                <slot name="title"></slot>
+            </div>
+            <div class="content">
+                <slot name="content"></slot>
+            </div>
+            <div class="footer">
+                <slot name="footer">
+                    更多信息
+                </slot>
+            </div>
+        </div>
+    </template>
+    <script src="../vue.js"></script>
+    <script src="插槽slots.js"></script>
+</body>
+</html>
